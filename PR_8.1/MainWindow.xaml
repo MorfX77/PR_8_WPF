@@ -1,0 +1,67 @@
+﻿<Window x:Class="PR_8._1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PR_8._1"
+        mc:Ignorable="d"
+        
+        Title="АИС Авиатор" Height="500" Width="800" FontFamily="Gadugi" FontSize="16" FontWeight="Bold" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/Image3.png">
+
+    <Grid>
+
+        <Image Margin="520,85,10,127" Source="/Image3.png" Stretch="Fill"/>
+
+        <Button Content="Авторизация" HorizontalAlignment="Center" Margin="0,296,0,0" VerticalAlignment="Top" Height="49" Width="136" Click="Button_Click" Background="#FF2D3142" Foreground="White" FontFamily="Gadugi" FontSize="16" FontWeight="Bold">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="DarkCyan"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="Width" Value="75"/>
+                    <Setter Property="Height" Value="35"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border BorderThickness="0"
+                        Background="{TemplateBinding Background}"
+                        CornerRadius="10">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <CheckBox Content="Лицензионное соглашение" HorizontalAlignment="Center" Margin="0,259,0,0" VerticalAlignment="Top" Height="23" Width="240" Checked="CheckBox_Checked" IsChecked="False"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,120,0,0" TextWrapping="Wrap" Text="Логин" VerticalAlignment="Top" Width="228" Height="34" Foreground="#FFB7B5B5"/>
+        <Label Content="У вас нет аккаунта?" HorizontalAlignment="Center" Margin="0,373,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Button Content="Создать аккаунт" HorizontalAlignment="Center" Margin="0,402,0,0" VerticalAlignment="Top" Height="49" Width="136" Click="Button_Click" Background="#FF2D3142" Foreground="White" FontFamily="Gadugi" FontSize="16" FontWeight="Bold" Opacity="0.5">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="DarkCyan"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="Width" Value="75"/>
+                    <Setter Property="Height" Value="35"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border BorderThickness="0"
+                                    Background="{TemplateBinding Background}"
+                                    CornerRadius="10">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Label Content="Войдите в аккаунт" HorizontalAlignment="Center" Margin="0,75,0,0" VerticalAlignment="Top"/>
+        <CheckBox Content="Показать пароль" HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" Width="240" Checked="CheckBox_Checked" IsChecked="False"/>
+        <TextBox x:Name="tb_Formula" HorizontalAlignment="Left" Margin="78,183,0,0" TextWrapping="Wrap" Text="Формула" VerticalAlignment="Top" Width="124" Height="59"/>
+        <TextBox x:Name="tb_Password" HorizontalAlignment="Center" Margin="0,178,0,0" TextWrapping="Wrap" Text="Пароль" VerticalAlignment="Top" Width="228" Height="34" Foreground="#FFB7B5B5"/>
+        <TextBox x:Name="tb_Res" HorizontalAlignment="Left" Margin="174,426,0,0" TextWrapping="Wrap" Text="Формула" VerticalAlignment="Top" Width="90" Height="30"/>
+
+    </Grid>
+</Window>
